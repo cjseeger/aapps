@@ -1,0 +1,293 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    4.3761525, 
+                    51.2685304
+                ], 
+                "type": "Point"
+            }, 
+            "id": 0, 
+            "properties": {
+                "address": "Noorderlaan 500, 2030 Antwerpen", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/noord_noorderlaan.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15736", 
+                "title": "Politie NOORD - Noorderlaan"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4341751, 
+                    51.2810943
+                ], 
+                "type": "Point"
+            }, 
+            "id": 1, 
+            "properties": {
+                "address": "Veltwijcklaan 1, 2180 Ekeren", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/noord_ekeren.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15737", 
+                "title": "Politie NOORD - Ekeren"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4446562, 
+                    51.2404186
+                ], 
+                "type": "Point"
+            }, 
+            "id": 2, 
+            "properties": {
+                "address": "Borrewaterstraat 1, 2170 Merksem", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/noord_borrewater.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15738", 
+                "title": "Politie NOORD - Merksem"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.3212058, 
+                    51.344306
+                ], 
+                "type": "Point"
+            }, 
+            "id": 3, 
+            "properties": {
+                "address": "Antwerpsebaan 142, 2040 Berendrecht", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/noord_berendrecht.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15740", 
+                "title": "Politie NOORD - Berendrecht"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.3909309, 
+                    51.1699419
+                ], 
+                "type": "Point"
+            }, 
+            "id": 4, 
+            "properties": {
+                "address": "Kleinesteenweg 16, 2610 Wilrijk", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/zuid_wilrijk.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15741", 
+                "title": "Politie ZUID - Wilrijk"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.3498902, 
+                    51.1783521
+                ], 
+                "type": "Point"
+            }, 
+            "id": 5, 
+            "properties": {
+                "address": "Berkenrodelei 28, 2660 Hoboken", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/zuid_berkenrodelei.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15742", 
+                "title": "Politie ZUID - Hoboken"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.3836284, 
+                    51.1890846
+                ], 
+                "type": "Point"
+            }, 
+            "id": 6, 
+            "properties": {
+                "address": "Sint-Bernardsesteenweg 111, 2020 Antwerpen", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/zuid_bernardse.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15744", 
+                "title": "Politie ZUID - Antwerpen"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4310426, 
+                    51.2241201
+                ], 
+                "type": "Point"
+            }, 
+            "id": 7, 
+            "properties": {
+                "address": "Handelsstraat 101, 2060 Antwerpen", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/city_handelsstraat.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15745", 
+                "title": "Politie CITY - Handelstraat"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4177931, 
+                    51.2108035
+                ], 
+                "type": "Point"
+            }, 
+            "id": 8, 
+            "properties": {
+                "address": "Quinten Matsijslei 50, 2018 Antwerpen", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/centrum_quinten.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15748", 
+                "title": "Politie CENTRUM - Quinten Matsijslei"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4149652, 
+                    51.1937215
+                ], 
+                "type": "Point"
+            }, 
+            "id": 9, 
+            "properties": {
+                "address": "De Wittestraat, 2600", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/Centrum_wittestraat.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15749", 
+                "title": "Politie CENTRUM - De Wittestraat"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.3978835, 
+                    51.2059234
+                ], 
+                "type": "Point"
+            }, 
+            "id": 10, 
+            "properties": {
+                "address": "Paleisstraat 104, 2018 Antwerpen", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/centrum_paleis.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15751", 
+                "title": "Politie CENTRUM - Paleisstraat"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4596103, 
+                    51.2182511
+                ], 
+                "type": "Point"
+            }, 
+            "id": 11, 
+            "properties": {
+                "address": "Unolaan 2, 2100", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/oost_unolaan.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15752", 
+                "title": "Politie OOST - Unolaan"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4546668, 
+                    51.2274873
+                ], 
+                "type": "Point"
+            }, 
+            "id": 12, 
+            "properties": {
+                "address": "Lakborslei 200, 2100 Deurne", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/oost_lakborslei.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15754", 
+                "title": "Politie OOST - Lakborslei"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4036298, 
+                    51.215847
+                ], 
+                "type": "Point"
+            }, 
+            "id": 13, 
+            "properties": {
+                "address": "Oudaan 5, 2000 Antwerpen", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/west_oudaan.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15756", 
+                "title": "Politie WEST - Oudaan"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.3780642, 
+                    51.2248311
+                ], 
+                "type": "Point"
+            }, 
+            "id": 14, 
+            "properties": {
+                "address": "Halewijnlaan 84, 2050 Antwerpen", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/west_halewijn.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=15761", 
+                "title": "Politie WEST - Halewijnlaan"
+            }, 
+            "type": "Feature"
+        }, 
+        {
+            "geometry": {
+                "coordinates": [
+                    4.4416876, 
+                    51.1993442
+                ], 
+                "type": "Point"
+            }, 
+            "id": 15, 
+            "properties": {
+                "address": "Junostraat 27, 2600 Berchem", 
+                "description": "", 
+                "image": "http://www.antwerpen.be/pics/Politie/teamoostcc00.jpg", 
+                "link": "http://www.antwerpen.be/smartsite.dws?ch=ABE&id=19522", 
+                "title": "Politie OOST - Junostraat"
+            }, 
+            "type": "Feature"
+        }
+    ], 
+    "type": "FeatureCollection"
+}
