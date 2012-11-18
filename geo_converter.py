@@ -36,8 +36,9 @@ class GeoJSONCoder(object):
                 'features' : []
                 }
 
-        for item in items:
+        for i, item in enumerate(items):
             geo_item = self.as_feature(item)
+            geo_item['id'] = i
             fc['features'].append(geo_item)
 
         return fc
