@@ -1,6 +1,7 @@
 import json
 import requests, requests_cache
 
+# select basic sqlite caching backend
 requests_cache.configure('http_cache')
 
 #class DataTankAdaptor(object):
@@ -44,8 +45,16 @@ class GeoJSONCoder(object):
         return fc
 
     def fetch(self, uri, cache=True):
-        r = requests.get(uri, headers={'Accept' : 'application/json'})
+        if cache:
+            with requests_cache.enabled():
+                r = requests.get(uri, headers={'Accept' : 'application/json'})
+        else:
+            with requests_cache.disabled():
+                r = requests.get(uri, headers={'Accept' : 'application/json'})
+
+        # last uri-part is dataset name and dictionary key
         key = uri.split('/')[-1]
+
         return r.json.get(key)
 
     def convert(self, uri, cache=True):
