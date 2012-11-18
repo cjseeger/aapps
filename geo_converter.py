@@ -4,29 +4,60 @@ import requests, requests_cache
 # select basic sqlite caching backend
 requests_cache.configure('http_cache')
 
-#class DataTankAdaptor(object):
-#    def __init__(self, res_uri=None):
-#        if res_uri:
-#            self.res_uri = res_uri
-#            self.resources = self.fetch(res_uri).get('resources')
+class DataTankWrapper(object):
+    def __init__(self, uri):
+        self.uri = uri
+        #self.resources = self.fetch(res_uri).get('resources')
 
 class GeoJSONCoder(object):
 
+    def geometry(self, item):
+        # heuristics for detecting item type (Polygon, Point, etc.)
+
+        # item contains a polygon key
+
+        if 'polygon' in item.keys():
+            return 'Polygon'
+
+        # item contains a gisx/y or point_lat/lng key
+
+        if set(item.keys()).intersection(set(['gisx', 'point_lat'])):
+                return 'Point'
+
+
     def as_feature(self, item):
+
+        geom = self.geometry(item)
 
         f = {
                 'type' : 'Feature',
-                'geometry' : { 'type' : 'Point' },
+                'geometry' : {},
                 'properties' : {}
             }
 
-        try:
-            coordinates = [float(item.pop('gisx')), float(item.pop('gisy'))]
-        except KeyError:
-            coordinates = [item.pop('point_lng'), item.pop('point_lat')]
+        # convert Point geometry object
+        if geom == 'Point':
+            f['geometry'] = { 'type' : 'Point' }
 
-        f['geometry']['coordinates'] = coordinates
+            try:
+                coordinates = [float(item.pop('gisx')), float(item.pop('gisy'))]
+            except KeyError:
+                coordinates = [item.pop('point_lng'), item.pop('point_lat')]
 
+
+        # convert Polygon geometry object
+        # TODO MultiPolygon?
+        if geom == 'Polygon':
+            f['geometry'] = { 'type' : 'Polygon' }
+
+            polygon = item.pop('polygon')
+            points = [pp.split(':') for pp in polygon.split('|')]
+            coordinates = [[float(coords[0]), float(coords[1])] for coords in points]
+
+        # add coord pairs to geom objects
+        f['geometry']['coordinates'] = [coordinates] # list-of-lists for coord-pairs
+
+        # add the remainder of the fields tot properties
         for k, v in item.iteritems():
             f['properties'][k] = v
 
@@ -66,6 +97,8 @@ class GeoJSONCoder(object):
 
 G = GeoJSONCoder()
 u = 'http://api.antwerpen.be/v1/infrastructuur/politie'
+u = 'http://api.antwerpen.be/v1/geografie/statistischesector'
+#d = G.fetch(u)
 gj = G.convert(u)
 print json.dumps(gj, sort_keys=True, indent=4)
 
