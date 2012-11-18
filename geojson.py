@@ -4,11 +4,6 @@ import requests, requests_cache
 # select basic sqlite caching backend
 requests_cache.configure('http_cache')
 
-class DataTankWrapper(object):
-    def __init__(self, uri):
-        self.uri = uri
-        #self.resources = self.fetch(res_uri).get('resources')
-
 class GeoJSONCoder(object):
 
     def geometry(self, item):
