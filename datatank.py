@@ -33,6 +33,13 @@ class Resource(object):
 
         return data
 
+    def save(self, filename, syntax):
+        f = open(filename, 'wb')
+        if syntax == 'geo':
+            f.write(json.dumps(self.json('geo'), sort_keys=True, indent=4))
+        f.close()
+
+
 class DataTankWrapper(object):
     def __init__(self, uri):
         self.uri = uri
@@ -68,5 +75,5 @@ class DataTankWrapper(object):
 
 A = DataTankWrapper('http://api.antwerpen.be/v1')
 res = A.resources()
-print res
+print res[27].json('geo')
 #print json.dumps(res, sort_keys=True, indent=4)

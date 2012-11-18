@@ -17,10 +17,10 @@
 <body>
 	<div id="map" style="width: 600px; height: 400px"></div>
 
-	<script src="statsec.json" type="text/javascript"></script>
+	<script src="poldist.json" type="text/javascript"></script>
 
 	<script>
-		var map = L.map('map').setView([51.24, 4.3761525], 11);
+		var map = L.map('map').setView([51.24, 4.3761525], 10);
 
 		L.tileLayer('http://{s}.tile.cloudmade.com/{key}/22677/256/{z}/{x}/{y}.png', {
 			attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2012 CloudMade',
@@ -29,12 +29,20 @@
 
         function onEachFeature(feature, layer) {
             // does this feature have a property named popupContent?
-            if (feature.properties && feature.properties.secnaam) {
-                layer.bindPopup(feature.properties.secnaam);
+            if (feature.properties && feature.properties.districtnaam) {
+                layer.bindPopup(feature.properties.districtnaam);
+            }
+            if (feature.properties && feature.properties.title) {
+                layer.bindPopup(feature.properties.title);
             }
         }
 
-        L.geoJson(statsec, {
+        L.geoJson(districts, {
+            onEachFeature: onEachFeature
+        }).addTo(map);
+
+
+        L.geoJson(politie, {
             onEachFeature: onEachFeature
         }).addTo(map);
 
