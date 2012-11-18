@@ -20,12 +20,23 @@
 	<script src="politie.json" type="text/javascript"></script>
 
 	<script>
-		var map = L.map('map').setView([51.2, 4.3761525], 11);
+		var map = L.map('map').setView([51.24, 4.3761525], 11);
 
 		L.tileLayer('http://{s}.tile.cloudmade.com/{key}/22677/256/{z}/{x}/{y}.png', {
 			attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2012 CloudMade',
 			key: 'BC9A493B41014CAABB98F0471D759707'
 		}).addTo(map);
+
+        function onEachFeature(feature, layer) {
+            // does this feature have a property named popupContent?
+            if (feature.properties && feature.properties.title) {
+                layer.bindPopup(feature.properties.title);
+            }
+        }
+
+        L.geoJson(politie, {
+            onEachFeature: onEachFeature
+        }).addTo(map);
 
 	</script>
 </body>
